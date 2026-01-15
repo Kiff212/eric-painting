@@ -111,7 +111,7 @@ export default function ServicesSection() {
                                 <p className="text-gray-300 mb-6">Boost your curb appeal with durable finishes.</p>
                                 <ul className="space-y-3">
                                     <li className="flex items-center gap-3 text-sm text-gray-200">
-                                        <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" /> Pressure Washing Prep
+                                        <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" /> Deep Surface Restoration
                                     </li>
                                     <li className="flex items-center gap-3 text-sm text-gray-200">
                                         <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" /> Weather-Resistant Paint
