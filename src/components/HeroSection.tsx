@@ -189,13 +189,13 @@ export default function HeroSection() {
       {/* --- LAYER 1: RED SPLASH --- */}
       <div
         ref={redLayer}
-        className="absolute z-10 bg-red-600 w-[50vmax] h-[50vmax] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        className="absolute z-10 bg-red-600 w-[50vmax] h-[50vmax] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none scale-0"
       />
 
       {/* --- LAYER 2: MASTER IMAGE REVEAL (Red Wall) --- */}
       <div
         ref={imageLayer}
-        className="absolute z-20 w-[50vmax] h-[50vmax] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden shadow-2xl"
+        className="absolute z-20 w-[50vmax] h-[50vmax] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden shadow-2xl scale-0"
       >
         <div className="relative w-full h-full">
           <img
@@ -212,11 +212,11 @@ export default function HeroSection() {
       {/* --- MAIN CONTENT (GLASS CARD) --- */}
       {/* Changed max-w-2xl to max-w-3xl to allow text to fit better */}
       <div className="relative z-30 w-full max-w-3xl px-4 mt-8">
-        <Card ref={cardRef} className="border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl overflow-hidden">
+        <Card ref={cardRef} className="border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl overflow-hidden opacity-0 translate-y-[50px]">
           <CardContent className="flex flex-col items-center text-center py-10 px-6 md:px-10">
 
             {/* TRUST BADGE */}
-            <div ref={badgeRef} className="mb-6 transform hover:scale-105 transition-transform duration-300">
+            <div ref={badgeRef} className="mb-6 transform hover:scale-105 transition-transform duration-300 opacity-0 translate-y-[40px] rotate-2">
               <Badge variant="secondary" className="bg-amber-400/90 hover:bg-amber-500 text-black px-3 py-1 text-xs font-bold shadow-lg border border-amber-200/50 flex gap-2 items-center">
                 <Star className="w-3 h-3 fill-black" />
                 Skilled & Detailed • Residential Painting
@@ -227,9 +227,9 @@ export default function HeroSection() {
             <div ref={titleGroupRef} className="space-y-2 mb-6">
               <h1 className="text-2xl md:text-5xl font-sans font-black text-white drop-shadow-xl tracking-tight leading-[1.1]">
                 {/* Added whitespace-nowrap to prevent break */}
-                <span ref={line1Ref} className="block whitespace-nowrap">TRANSFORM YOUR HOME!</span>
+                <span ref={line1Ref} className="block whitespace-nowrap opacity-0 translate-y-[40px] rotate-2">TRANSFORM YOUR HOME!</span>
                 <div className="block overflow-visible">
-                  <span ref={line2Ref} className="text-red-500 italic relative whitespace-nowrap inline-block pr-2">
+                  <span ref={line2Ref} className="text-red-500 italic relative whitespace-nowrap inline-block pr-2 opacity-0 translate-y-[40px] rotate-2">
                     EXPERT PAINTING
                     {/* Brush Stroke */}
                     <svg className="absolute w-[105%] h-[12px] -bottom-1 -left-[2%] z-[-1] opacity-90" viewBox="0 0 200 20" preserveAspectRatio="none">
@@ -237,19 +237,19 @@ export default function HeroSection() {
                     </svg>
                   </span>
                 </div>
-                <span ref={line3Ref} className="block text-2xl md:text-4xl mt-1 text-gray-100">IN RICHMOND & EAST BAY</span>
+                <span ref={line3Ref} className="block text-2xl md:text-4xl mt-1 text-gray-100 opacity-0 translate-y-[40px] rotate-2">IN RICHMOND & EAST BAY</span>
               </h1>
             </div>
 
             {/* DESCRIPTION - Stylized & Interesting */}
-            <p ref={descRef} className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
+            <p ref={descRef} className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed font-medium opacity-0 translate-y-[40px] rotate-2">
               Quality residential painting for <span className="text-white font-bold">interiors & exteriors</span>. <br className="hidden md:block" />
               We focus on <span className="text-white font-bold">clean preparation</span> and a <span className="text-white font-bold">flawless finish!</span> <br className="md:hidden" />
               <span className="inline-block mt-2 text-red-100 italic font-light tracking-wide border-b border-red-500/30 pb-0.5">"Your home treated with respect."</span>
             </p>
 
             {/* CTAs */}
-            <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+            <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 w-full justify-center opacity-0 translate-y-[40px] rotate-2">
               <Button
                 onClick={() => setIsModalOpen(true)}
                 onMouseEnter={(e) => handleButtonHover(e, true)}
@@ -338,6 +338,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-    </section>
+    </section >
   );
 }
